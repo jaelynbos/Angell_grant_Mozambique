@@ -13,7 +13,7 @@ All pre-processing, mapping, and  analysis was run on the University of Californ
 Reads from Mozambique are not publicly available at this time, pending publication and approval from the Mozambican government.\
 Backups of raw reads are stored on UCSC data storage server 'Bishop' in three directories called MPJB_L1, MPJB_L2, and MPJB_L3, corresponding to three Illumina NovaSeqX sequencing lanes. Metadata is available through LIMS. Do not use data from this project without first contacting Jaelyn due to stringent permitting requirements.
 
-The _Acropora millepora_ reference genome was downloaded from NCBI, at https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_013753865.1/, GenBank assembly GCA_013753865.1 \
+The _Acropora millepora_ reference genome was downloaded from NCBI, at https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_013753865.1/, GenBank assembly GCA_013753865.1 
 
 ## Required software
 Fastp version 0.23.4. https://github.com/opengene/fastp \
@@ -24,7 +24,7 @@ BWA-mem version  0.7.17. https://bio-bwa.sourceforge.net/ \
 SAMtools version 1.20. https://github.com/samtools/samtools \
 GNU Datamash version 1.9. https://www.gnu.org/software/datamash/ \
 ANGSD version 0.940 https://www.popgen.dk/angsd/index.php/ANGSD \
-R version 4.3.3 \
+R version 4.3.3 
 
 ## Bioinformatic pre-processing
 Samples from Mozambique were pooled and sequenced across three different lanes. Reads on the storage server are de-multiplexed, but not merged across lanes. The three lane directories can be downloaded from the storage server at the beginning of this pipeline - here they are stored in a higher level directory called Moz_reads. 
@@ -49,4 +49,4 @@ This needs to be done in two rounds, in order to find loci that are usable in al
 2.5 Re-run ANGSD using ANGSD_saf_by_site2.sh. \
 2.6 Concatenate those .saf files and create site frequency spectra with sfs_by_site2.sh \
 2.7 Calculate a variety of diversity metrics by chromosome with thetas_bysite.sh \
-2.8 Do final per-population calculations of pi, Watterson's theta, and Tajima's D with Angell_calcs.R \
+2.8 Do final per-population calculations of pi, Watterson's theta, and Tajima's D with Angell_calcs.R 
