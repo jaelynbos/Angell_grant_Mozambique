@@ -5,7 +5,7 @@ The README is organized into four sections: \
 A) Data sources \
 B) Required software \
 C) Bioninformatic pre-processing for all samples \
-D) Genetic diversity analysis \
+D) Genetic diversity analysis 
 
 All pre-processing, mapping, and  analysis was run on the University of California's high performance computing cluster 'Elkhorn' (https://its.ucsc.edu/services/research-computing/research-specific-computing-and-applications/elkhorn-high-performance-computing-cluster/)
 
@@ -37,16 +37,16 @@ Bioinformatic processing should be conducted using the following scripts in orde
 1.4 Second trim using trim_funcs2.sh. Requires: Fastp, Parallel, and Multiqc. \
 1.5 Re-pair unpaired reads using repair_2.sh. Requires: BBtools. \
 1.6 Map genes to _Acropora_millepora_ reference using bwa_array.bash to run bwa_amillepora.sh. Requires: BWA. \
-1.7 Sort and index SAMfiles and convert to BAMfiles with samtools_loop.sh Requires: SAMtools. \
+1.7 Sort and index SAMfiles and convert to BAMfiles with samtools_loop.sh Requires: SAMtools. 
 
 ## Data analysis
 This needs to be done in two rounds, in order to find loci that are usable in all populations, then compute diversity metrics using those loci. 
-2.1 Make initial list of loci for all samples using angsd_invariant_sitelist.sh. Concatenate that list with concat_filt_invariant_sites.sh. Note that the resulting list includes both variant and invariant sites! 
-2.2 Make site allele frequency (.saf) files with ANGSD_saf_by_site.sh.
-2.3 Concatenate those .saf files with sfs_by_site.sh
-2.4 Use the concatenated .saf files to create a better list of loci using stricter_sitelist.sh
-2.5 Re-run ANGSD using ANGSD_saf_by_site2.sh.
-2.6 Concatenate those .saf files and create site frequency spectra with sfs_by_site2.sh
-2.7 Calculate a variety of diversity metrics by chromosome with thetas_bysite.sh
-2.8 Do final per-population calculations of pi, Watterson's theta, and Tajima's D with Angell_calcs.R
 
+2.1 Make initial list of loci for all samples using angsd_invariant_sitelist.sh. Concatenate that list with concat_filt_invariant_sites.sh. Note that the resulting list includes both variant and invariant sites! \
+2.2 Make site allele frequency (.saf) files with ANGSD_saf_by_site.sh. \
+2.3 Concatenate those .saf files with sfs_by_site.sh \
+2.4 Use the concatenated .saf files to create a better list of loci using stricter_sitelist.sh \
+2.5 Re-run ANGSD using ANGSD_saf_by_site2.sh. \
+2.6 Concatenate those .saf files and create site frequency spectra with sfs_by_site2.sh \
+2.7 Calculate a variety of diversity metrics by chromosome with thetas_bysite.sh \
+2.8 Do final per-population calculations of pi, Watterson's theta, and Tajima's D with Angell_calcs.R \
